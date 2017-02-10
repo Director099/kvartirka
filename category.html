@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>АН "Элитные квартиры Уфы"</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link href="bootstrap/select/dist/css/bootstrap-select.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,400,500,900&amp;subset=cyrillic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif&amp;subset=cyrillic" rel="stylesheet">
+	<script src="js/jquery/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery/jquery-migrate-1.4.1.min.js"></script>
+	<script rel="stylesheet" src="bootstrap/js/bootstrap.min.js"></script>
+	<script rel="stylesheet" src="bootstrap/select/js/bootstrap-select.js"></script>
+</head>
+<body>
+	<header>
+		<div class="logo-background">
+			<a class="logo" href="index.html">АН "Элитные квартиры Уфы"</a>
+			<button class="btn btn-set" data-toggle="modal" data-target="#myModal">оставить заявку</button>
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			    <div class="modal-dialog">
+			    	<div class="modal-content">
+				        <div class="modal-header">
+				        	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				        	<h4 class="modal-title" id="myModalLabel">Оставьте заявку</h4>
+				        </div>
+				        <div class="modal-body">
+					        <form role="form">
+							    <div class="form-group">
+								    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ваше имя" required>
+							    </div>
+							    <div class="form-group">
+								    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="E-mail" required>
+							    </div>
+							    <div class="form-group">
+								    <input type="tel" class="form-control" id="exampleInputPassword1" placeholder="Телефон" required>
+							    </div>
+							    <div class="form-group setting">
+								    <label>Тип недвижимости</label>
+								    <select class="selectpicker">
+									    <option>городская</option>
+									    <option>загородняя</option>
+									    <option>коммерческая</option>
+									</select>
+							    </div>
+							    <div class="form-group setting">
+									<label>Услуга</label>
+									<select class="selectpicker">
+									    <option>купить</option>
+									    <option>продать</option>
+									    <option>сдать</option>
+									    <option>снять</option>
+									</select>
+							    </div>
+							    <textarea class="form-control" rows="3"></textarea>
+							    <div class="form-group">
+							    	<span class="oiwere">
+							    		<label for="exampleInputFile" class="text-center">Прикрепить фото обьекта</label>
+							    		<input type="file" name="photo" class="wpcf7-form-control wpcf7-file sr-only" id="exampleInputFile" aria-invalid="false">
+							    	</span>
+							    </div>
+							  <button type="submit" class="btn btn-default btn-set">Отправить</button>
+							</form>
+				        </div>
+				        <div class="modal-footer"></div>
+			    	</div>
+			    </div>
+			</div>
+		</div>
+		<div class="container-fluid nav-background">
+			<div class="container">		
+				<nav class="navbar navbar-setting" role="navigation">
+					<button type="button" class="navbar-toggle button-setting" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Включить/выключить навигацию</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav nav-justified">
+							<li>
+								<a href="#">Подобрать объект</a>
+							</li>
+							<li>
+								<a href="#">Новые объекты</a>
+							</li>
+							<li>
+								<a href="#">О компании</a>
+							</li>
+							<li>
+								<a href="news.html">Новости</a>	
+							</li>
+							<li>
+								<a href="contact.html">Контакты</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>	
+		<div class="background">
+			<div class="block-set">
+				<section class="order">
+					<h2 class="best-sentence">Выбранная категория</h2>
+				</section>
+			</div>
+		</div>
+		<div class="container filter-search">
+			<section class="search">
+				<h2>найти квартиру своей мечты сегодня</h2>
+				<p>Мгновенный поиск нужного дома с нужным месторасположением, цен и других критериев, просто начав свой поиск прямо сейчас.</p>
+				<form class="clearfix" method="post">
+                    <div class="col-lg-12">
+					    <div class="col-lg-3">
+						    <div class="input-group-btn indent-down">
+				        		<button type="button" class="btn btn-default dropdown-toggle btn-wid" data-toggle="dropdown">В черте города</button>
+						        <ul class="dropdown-menu pull-right">
+						            <li><a href="#">за городом</a></li>
+						        </ul>
+				      		</div>
+					    </div>
+					    <div class="col-lg-3">	
+				        	<div class="input-group-btn indent-down">
+				        		<button type="button" class="btn btn-default dropdown-toggle btn-wid" data-toggle="dropdown">Продажа элитных квартир</button>
+						        <ul class="dropdown-menu pull-right">
+						            <li><a href="#">аренда элитных квартир</a></li>
+						            <li><a href="#">Продажа квартир</a></li>
+						            <li><a href="#">Продажа элитных коттеджей</a></li>
+						            <li><a href="#">аренда элитных коттеджей</a></li>
+						            <li><a href="#">Продажа коммерческой недвижимости</a></li>
+						            <li><a href="#">аренду коммерческой недвижимости</a></li>
+						            <li><a href="#">Продажа готового бизнеса</a></li>
+						        </ul>
+				      		</div>
+					    </div>
+					    <div class="col-lg-3">
+				        	<div class="input-group-btn indent-down">
+				        		<button type="button" class="btn btn-default dropdown-toggle btn-wid" data-toggle="dropdown">Аренда</button>
+						        <ul class="dropdown-menu pull-right">
+						            <li><a href="#">Продажа</a></li> 
+						        </ul>
+				      		</div>
+					    </div>
+					    <div class="col-lg-3">
+				        	<div class="input-group-btn indent-down">
+				        		<button type="button" class="btn btn-default dropdown-toggle btn-wid" data-toggle="dropdown">Кировский</button>
+						        <ul class="dropdown-menu pull-right">
+						            <li><a href="#">советский</a></li>
+						            <li><a href="#">Дёмский</a></li>
+						            <li><a href="#">Калининский</a></li>
+						            <li><a href="#">Орджоникидзевский</a></li>
+						            <li><a href="#">Ленинский</a></li>
+						            <li><a href="#">Октябрьский</a></li>
+						        </ul>
+				      		</div>
+					    </div>
+					</div>
+					<div class="col-lg-12">
+					    <div class="col-lg-3">
+						    <div class="input-group-btn indent-down">
+				        		<button type="button" class="btn btn-default dropdown-toggle btn-wid" data-toggle="dropdown">В черте города</button>
+						        <ul class="dropdown-menu pull-right">
+						            <li><a href="#">за городом</a></li>
+						        </ul>
+				      		</div>
+					    </div>
+					    <div class="col-lg-3">	
+				        	<div class="input-group-btn indent-down">
+				        		<button type="button" class="btn btn-default dropdown-toggle btn-wid" data-toggle="dropdown">Продажа элитных квартир</button>
+						        <ul class="dropdown-menu pull-right">
+						            <li><a href="#">аренда элитных квартир</a></li>
+						            <li><a href="#">Продажа квартир</a></li>
+						            <li><a href="#">Продажа элитных коттеджей</a></li>
+						            <li><a href="#">аренда элитных коттеджей</a></li>
+						            <li><a href="#">Продажа коммерческой недвижимости</a></li>
+						            <li><a href="#">аренду коммерческой недвижимости</a></li>
+						            <li><a href="#">Продажа готового бизнеса</a></li>
+						        </ul>
+				      		</div>
+					    </div>
+					    <div class="col-lg-3">
+				        	<div class="input-group-btn indent-down">
+				        		<button type="button" class="btn btn-default dropdown-toggle btn-wid" data-toggle="dropdown">Аренда</button>
+						        <ul class="dropdown-menu pull-right">
+						            <li><a href="#">Продажа</a></li> 
+						        </ul>
+				      		</div>
+					    </div>
+					    <div class="col-lg-3">
+				        	<div class="input-group-btn indent-down">
+				        		<button type="button" class="btn btn-default dropdown-toggle btn-wid" data-toggle="dropdown">Кировский</button>
+						        <ul class="dropdown-menu pull-right">
+						            <li><a href="#">советский</a></li>
+						            <li><a href="#">Дёмский</a></li>
+						            <li><a href="#">Калининский</a></li>
+						            <li><a href="#">Орджоникидзевский</a></li>
+						            <li><a href="#">Ленинский</a></li>
+						            <li><a href="#">Октябрьский</a></li>
+						        </ul>
+				      		</div>
+					    </div>
+					</div>
+					<div class="basis-buttom">
+						<div class="button-style"></div>
+						<div class="position-center">
+							<button>искать</button>
+						</div>
+					</div>
+                </form>
+			</section>
+		</div>
+	</header>
+	<main>
+		<div class="container slider ident-category-top">
+			<section class="alignment">
+				<h2>Выбранная категория</h2>
+				<img src="img/delimetr.png" alt="">
+			</section>
+			<div class="col-lg-12">
+				<div class="col-md-3">
+					<a href="#" data-toggle="modal" data-target="#mySlider">
+						<div class="photo-slide photo-slide-none">
+							<img class="img-responsive" src="img/picture-2.jpg" alt="Меню">
+							<div class="characteristics">
+								<div class="characteristics-text">
+									<p>Площадь</p>
+									<p>Район</p>
+									<p>Цена</p>
+								</div>
+								<div class="characteristics-text">
+									<p>220м</p>
+									<p>Октябрьский</p>
+									<p>10 000 000руб</p>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3">
+					<a href="#" data-toggle="modal" data-target="#mySlider">
+						<div class="photo-slide photo-slide-none">
+							<img class="img-responsive" src="img/picture-2.jpg" alt="Меню">
+							<div class="characteristics">
+								<div class="characteristics-text">
+									<p>Площадь</p>
+									<p>Район</p>
+									<p>Цена</p>
+								</div>
+								<div class="characteristics-text">
+									<p>220м</p>
+									<p>Октябрьский</p>
+									<p>10 000 000руб</p>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3">
+					<a href="#" data-toggle="modal" data-target="#mySlider">
+						<div class="photo-slide photo-slide-none">
+							<img class="img-responsive" src="img/picture-2.jpg" alt="Меню">
+							<div class="characteristics">
+								<div class="characteristics-text">
+									<p>Площадь</p>
+									<p>Район</p>
+									<p>Цена</p>
+								</div>
+								<div class="characteristics-text">
+									<p>220м</p>
+									<p>Октябрьский</p>
+									<p>10 000 000руб</p>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3">
+					<a href="#" data-toggle="modal" data-target="#mySlider">
+						<div class="photo-slide photo-slide-none">
+							<img class="img-responsive" src="img/picture-2.jpg" alt="Меню">
+							<div class="characteristics">
+								<div class="characteristics-text">
+									<p>Площадь</p>
+									<p>Район</p>
+									<p>Цена</p>
+								</div>
+								<div class="characteristics-text">
+									<p>220м</p>
+									<p>Октябрьский</p>
+									<p>10 000 000руб</p>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="col-lg-12">
+				<div class="col-md-3">
+					<a href="#" data-toggle="modal" data-target="#mySlider">
+						<div class="photo-slide photo-slide-none">
+							<img class="img-responsive" src="img/picture-2.jpg" alt="Меню">
+							<div class="characteristics">
+								<div class="characteristics-text">
+									<p>Площадь</p>
+									<p>Район</p>
+									<p>Цена</p>
+								</div>
+								<div class="characteristics-text">
+									<p>220м</p>
+									<p>Октябрьский</p>
+									<p>10 000 000руб</p>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3">
+					<a href="#" data-toggle="modal" data-target="#mySlider">
+						<div class="photo-slide photo-slide-none">
+							<img class="img-responsive" src="img/picture-2.jpg" alt="Меню">
+							<div class="characteristics">
+								<div class="characteristics-text">
+									<p>Площадь</p>
+									<p>Район</p>
+									<p>Цена</p>
+								</div>
+								<div class="characteristics-text">
+									<p>220м</p>
+									<p>Октябрьский</p>
+									<p>10 000 000руб</p>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3">
+					<a href="#" data-toggle="modal" data-target="#mySlider">
+						<div class="photo-slide photo-slide-none">
+							<img class="img-responsive" src="img/picture-2.jpg" alt="Меню">
+							<div class="characteristics">
+								<div class="characteristics-text">
+									<p>Площадь</p>
+									<p>Район</p>
+									<p>Цена</p>
+								</div>
+								<div class="characteristics-text">
+									<p>220м</p>
+									<p>Октябрьский</p>
+									<p>10 000 000руб</p>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3">
+					<a href="#" data-toggle="modal" data-target="#mySlider">
+						<div class="photo-slide photo-slide-none">
+							<img class="img-responsive" src="img/picture-2.jpg" alt="Меню">
+							<div class="characteristics">
+								<div class="characteristics-text">
+									<p>Площадь</p>
+									<p>Район</p>
+									<p>Цена</p>
+								</div>
+								<div class="characteristics-text">
+									<p>220м</p>
+									<p>Октябрьский</p>
+									<p>10 000 000руб</p>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="modal fade" id="mySlider" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			    <div class="modal-dialog">
+			    	<div class="modal-content">
+				        <div class="modal-body color-body">
+					        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+							    <div class="carousel-inner">
+							    	<div class="item active">
+							      		<img src="img/picture-1.jpg" alt="Изображение обьекта">
+							      		<div class="description">
+							      			<div class="description-object">
+								        		<p>площадь - 200 м2<br>
+								        		район - Кировский<br>
+								        		цена - 7000000 руб</p>
+							        		</div>
+							        		<div class="description-characteristics">
+							        			<h4>Описание обьекта</h4>
+								        		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus minus nam, quisquam sint voluptatum ad quis odio iure numquam quod laborum corporis, quidem fugit voluptatem alias suscipit deleniti magni!</p>
+								        		<a class="btn" href="#">подробнее<span class="glyphicon glyphicon-chevron-right"></span></a>
+							        		</div>
+							        	</div>
+							    	</div>
+							    	<div class="item">
+							      		<img src="img/picture-2.jpg" alt="Изображение обьекта">
+							      		<div class="description">
+							      			<div class="description-object">
+								        		<p>площадь - 200 м2<br>
+								        		район - Кировский<br>
+								        		цена - 7000000 руб</p>
+							        		</div>
+							        		<div class="description-characteristics">
+							        			<h4>Описание обьекта</h4>
+								        		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus minus nam, quisquam sint voluptatum ad quis odio iure numquam quod laborum corporis, quidem fugit voluptatem alias suscipit deleniti magni!</p>
+								        		<a class="btn" href="#">подробнее<span class="glyphicon glyphicon-chevron-right"></span></a>
+							        		</div>
+							        	</div>
+							    	</div>
+							    	<div class="item">
+							      		<img src="img/picture-3.jpg" alt="Изображение обьекта">
+							      		<div class="description">
+							      			<div class="description-object">
+								        		<p>площадь - 200 м2<br>
+								        		район - Кировский<br>
+								        		цена - 7000000 руб</p>
+							        		</div>
+							        		<div class="description-characteristics">
+							        			<h4>Описание обьекта</h4>
+								        		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus minus nam, quisquam sint voluptatum ad quis odio iure numquam quod laborum corporis, quidem fugit voluptatem alias suscipit deleniti magni!</p>
+								        		<a class="btn" href="#">подробнее<span class="glyphicon glyphicon-chevron-right"></span></a>
+							        		</div>
+							        	</div>
+							    	</div>
+							    	<div class="item">
+							      		<img src="img/picture-8.jpg" alt="Изображение обьекта">
+							      		<div class="description">
+							      			<div class="description-object">
+								        		<p>площадь - 200 м2<br>
+								        		район - Кировский<br>
+								        		цена - 7000000 руб</p>
+							        		</div>
+							        		<div class="description-characteristics">
+							        			<h4>Описание обьекта</h4>
+								        		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus minus nam, quisquam sint voluptatum ad quis odio iure numquam quod laborum corporis, quidem fugit voluptatem alias suscipit deleniti magni!</p>
+								        		<a class="btn" href="#">подробнее<span class="glyphicon glyphicon-chevron-right"></span></a>
+							        		</div>
+							        	</div>
+							    	</div>
+							    	<div class="item">
+							      		<img src="img/picture-4.jpg" alt="Изображение обьекта">
+							      		<div class="description">
+							      			<div class="description-object">
+								        		<p>площадь - 200 м2<br>
+								        		район - Кировский<br>
+								        		цена - 7000000 руб</p>
+							        		</div>
+							        		<div class="description-characteristics">
+							        			<h4>Описание обьекта</h4>
+								        		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus minus nam, quisquam sint voluptatum ad quis odio iure numquam quod laborum corporis, quidem fugit voluptatem alias suscipit deleniti magni!</p>
+								        		<a class="btn" href="#">подробнее<span class="glyphicon glyphicon-chevron-right"></span></a>
+							        		</div>
+							        	</div>
+							    	</div>
+							    	<div class="item">
+							      		<img src="img/picture-5.jpg" alt="Изображение обьекта">
+							      		<div class="description">
+							      			<div class="description-object">
+								        		<p>площадь - 200 м2<br>
+								        		район - Кировский<br>
+								        		цена - 7000000 руб</p>
+							        		</div>
+							        		<div class="description-characteristics">
+							        			<h4>Описание обьекта</h4>
+								        		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus minus nam, quisquam sint voluptatum ad quis odio iure numquam quod laborum corporis, quidem fugit voluptatem alias suscipit deleniti magni!</p>
+								        		<a class="btn" href="#">подробнее<span class="glyphicon glyphicon-chevron-right"></span></a>
+							        		</div>
+							        	</div>
+							    	</div>
+							    	<div class="item">
+							      		<img src="img/picture-6.jpg" alt="Изображение обьекта">
+							      		<div class="description">
+							      			<div class="description-object">
+								        		<p>площадь - 200 м2</p>
+								        		<p>район - Кировский</p>
+								        		<p>цена - 7000000 руб</p>
+							        		</div>
+							        		<div class="description-characteristics">
+							        			<h4>Описание обьекта</h4>
+								        		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus minus nam, quisquam sint voluptatum ad quis odio iure numquam quod laborum corporis, quidem fugit voluptatem alias suscipit deleniti magni!</p>
+								        		<a class="btn" href="#">подробнее<span class="glyphicon glyphicon-chevron-right"></span></a>
+							        		</div>
+							        	</div>
+							    	</div>
+							    	<div class="item">
+							      		<img src="img/picture-7.jpg" alt="Изображение обьекта">
+							      		<div class="description">
+							      			<div class="description-object">
+								        		<p>площадь - 200 м2<br>
+								        		район - Кировский<br>
+								        		цена - 7000000 руб</p>
+							        		</div>
+							        		<div class="description-characteristics">
+							        			<h4>Описание обьекта</h4>
+								        		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus minus nam, quisquam sint voluptatum ad quis odio iure numquam quod laborum corporis, quidem fugit voluptatem alias suscipit deleniti magni!</p>
+								        		<a class="btn" href="#">подробнее<span class="glyphicon glyphicon-chevron-right"></span></a>
+							        		</div>
+							        	</div>
+							    	</div>
+							    </div>
+							    <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+							    	<span class="glyphicon glyphicon-chevron-left"></span>
+							    </a>
+							    <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+							    	<span class="glyphicon glyphicon-chevron-right"></span>
+							    </a>
+							</div>
+				        </div>
+			    	</div>
+			    </div>
+			</div>
+			<div class="center-paginator">
+				<ul class="pagination">
+	  				<li class="disabled"><a href="#">&laquo;</a></li>
+	  				<li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+				    <li><a href="#">2</a></li>
+				    <li><a href="#">3</a></li>
+				    <li><a href="#">4</a></li>
+				    <li><a href="#">5</a></li>
+				    <li><a href="#">&raquo;</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="indent-top clearfix">
+			<section class="alignment">
+				<h2>Меню категории</h2>
+				<img src="img/delimetr.png" alt="">
+			</section>
+			<div class="indent">
+				<div class="col-md-3">
+					<a href="category.html" class="image-border">
+						<img class="img-responsive" src="img/picture-1.jpg" alt="Квартира">
+						<p>Продажа элитных квартир</p>
+					</a>
+				</div>
+				<div class="col-md-3">
+					<a href="category.html" class="image-border">
+						<img class="img-responsive" src="img/picture-1.jpg" alt="Квартира">
+						<p>Сдача в аренду элитных квартир</p>
+					</a>
+				</div>
+				<div class="col-md-3">
+					<a href="category.html" class="image-border">
+						<img class="img-responsive" src="img/picture-1.jpg" alt="Квартира">
+						<p>Продажа квартир</p>
+					</a>
+				</div>
+				<div class="col-md-3">
+					<a href="category.html" class="image-border">
+						<img class="img-responsive" src="img/picture-1.jpg" alt="Квартира">
+						<p>Продажа элитных коттеджей</p>
+					</a>
+				</div>
+			</div>
+			<div class="indent">
+				<div class="col-md-3">
+					<a href="category.html" class="image-border">
+						<img class="img-responsive" src="img/picture-1.jpg" alt="Квартира">
+						<p>Сдача в аренду элитных коттеджей</p>
+					</a>
+				</div>
+				<div class="col-md-3">
+					<a href="#" class="image-border">
+						<img class="img-responsive" src="img/picture-1.jpg" alt="Квартира">
+						<p>Продажа коммерческой недвижимости</p>
+					</a>
+				</div>
+				<div class="col-md-3">
+					<a href="category.html" class="image-border">
+						<img class="img-responsive" src="img/picture-1.jpg" alt="Квартира">
+						<p>Сдача в аренду коммерческой недвижимости</p>
+					</a>
+				</div>
+				<div class="col-md-3">
+					<a href="category.html" class="image-border">
+						<img class="img-responsive" src="img/picture-1.jpg" alt="Квартира">
+						<p>Инвестиции,<br> Продажа готового бизнеса</p>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="delivery">
+			<div class="dark">
+				<div class="container">
+					<p class="title">Хотите продать или сдать в аренду  ваш объект недвижимости?</p>
+					<p>Заполните форму и мы рассмотрим обращение в кратчайший срок.</p>
+					<img src="img/long-delimetr.png" alt="">
+					<p>Поля помеченные * обязательны для заполнения</p>
+					<form class="clearfix" role="form">
+						<div class="row">
+						    <div class="col-lg-6">
+							    <div class="form-group">
+							    	<input type="email" class="form-control form-set" id="exampleInputEmail1" placeholder="* АДРЕС ЭЛЕКТРОННОЙ  ПОЧТЫ">
+							    </div>
+							</div>
+							<div class="col-lg-6">
+							    <div class="form-group">
+							    	<input type="text" class="form-control form-set" id="exampleInputPassword1" placeholder="* НОМЕР ТЕЛЕФОНА">
+							    </div>
+							</div>
+						</div>
+						<div class="row">
+						    <div class="col-lg-6">
+							    <div class="input-group form-group">
+						        	<div class="input-group-btn select-setting">
+									    <select class="selectpicker" data-width="50%" data-size="auto">
+										    <option>*Тип недвижимости</option>
+										    <option>городская</option>
+										    <option>загородняя</option>
+										    <option>коммерческая</option>
+										</select>
+						      		</div>
+						    	</div>
+						    </div>
+						    <div class="col-lg-6">
+						    	<div class="input-group form-group">
+						        	<div class="input-group-btn select-setting">
+										<select class="selectpicker" data-width="50%" data-size="auto">
+										    <option>*Услуга</option>
+										    <option>купить</option>
+										    <option>продать</option>
+										    <option>сдать</option>
+										    <option>снять</option>
+										</select>
+						      		</div>
+						    	</div>
+						    </div>
+						</div>
+					    <textarea class="form-control form-set" rows="12" placeholder="СООБЩЕНИЕ"></textarea>
+					    <div class="form-group">
+						    <button class="attach-photo">прикрепить фото объекта</button>
+					    </div>
+					    <div class="basis-buttom">
+							<div class="button-style"></div>
+							<div class="position-center">
+								<button>отправить</button>
+							</div>
+						</div>				
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="contact-info">
+			<div class="container">
+				<div class="row">
+					<h2>Контактная информация</h2>
+					<img class="img-center" src="img/delimetr.png" alt="">
+					<div class="col-md-4 cont">
+						<div class="border">
+							<img src="img/phone.svg" alt="Телефон">
+							<p>Позвонить нам</p>
+							<span>Александр Рукавичкин<br><a href="tel:+79174040500">+7 (917) 404-05-00</a></span>
+						</div>
+					</div>
+					<div class="col-md-4 cont">
+						<div class="border">
+							<img src="img/mail.svg" alt="Почта">
+							<p>написать нам</p>
+							<span>info@morozulka.ru</span>
+						</div>
+					</div>
+					<div class="col-md-4 cont">
+						<div class="border">
+							<img src="img/placeholder.svg" alt="Местоположение">
+							<p>приехать к нам</p>
+							<span>г. Уфа, ул. Морозщиплетнос<br> д.20, офис 100</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="map">
+			<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=BMe4_-TbARje5MuxbtOIlrn4bBQclKXI&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=false"></script>
+		</div>
+		<div class="block-partner">
+			<section class="alignment">
+				<h2>наши партнеры</h2>
+				<img src="img/delimetr.png" alt="полоса">
+			</section>
+			<div class="partner">
+				<a href="#">
+					<img src="img/partner/pepsi.png" alt="Партнер">
+				</a>
+				<a href="#">
+					<img src="img/partner/pepsi.png" alt="Партнер">
+				</a>
+				<a href="#">
+					<img src="img/partner/pepsi.png" alt="Партнер">
+				</a>
+				<a href="#">
+					<img src="img/partner/pepsi.png" alt="Партнер">
+				</a>
+				<a href="#">
+					<img src="img/partner/pepsi.png" alt="Партнер">
+				</a>
+			</div>
+		</div>
+	</main>
+	<footer class="container-fluid">
+		<p>lorem</p>
+		<div class="converter">
+			<a href="#">
+				<img src="img/partner/converter.svg" alt="Web-converter" width="170" height="50">
+			</a>
+		</div>
+	</footer>
+	<script>
+			$('.selectpicker').selectpicker({
+		  style: 'btn-info',
+		  size: 4
+		});
+	</script>
+</body>
+</html>

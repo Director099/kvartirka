@@ -1,0 +1,53 @@
+.background {
+	background: url("img/slide1.jpg") no-repeat;
+	background-size: cover;
+	height: 400px;
+	.appeal {
+		padding-top: 5%;
+	}
+}
+
+.news {
+	padding: 20px;
+	.briefly {
+		display: flex;
+    	margin: 20px 0;
+		.text {
+			display: flex;
+			flex-direction: column;
+    		justify-content: space-between;
+			margin-left: 20px;
+			font: 16px/22px "Roboto", "Arial", sans-serif;
+			h2 {
+				text-transform: uppercase;
+				margin-top: 0;
+			}
+
+			a {
+				margin-right: auto;
+				background: #f9e6b2;
+    			color: #000;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	header {
+		.background {
+			.appeal {
+				padding-top: 5%;
+			}
+		} 
+    }
+}
+
+@media (max-width: 520px) {
+	header {
+		.background {
+			.appeal {
+				padding-top: 5%;
+			}
+		} 
+    }
+}
